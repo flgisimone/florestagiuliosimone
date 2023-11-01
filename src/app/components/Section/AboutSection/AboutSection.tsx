@@ -10,11 +10,12 @@ import stack from '../../../utils/stack'
 
 import styles from './AboutSection.module.scss'
 import TextSphere from '../../TextSphere';
+import Image from 'next/image';
 
 
 const AboutSection = () => {
 
-  const stackImg = stack.map((item, index) => (<li key={index}> <img src={item.url} alt={item.name} /></li>))
+  const stackImg = stack.map((item, index) => (<li key={index}> <Image src={item.url} alt={item.name} /></li>))
 
   return (
     <section className={styles['about-section']}>
