@@ -10,7 +10,7 @@ const portfolio = [
       "repository": "https://github.com/flgisimone/memories-social-app",
       "site": "https://github.com/flgisimone/memories-social-app",
       // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop />, <AiOutlineMobile />]
+      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1} />]
   },
   {
       "id": 2,
@@ -20,7 +20,7 @@ const portfolio = [
       "repository": "https://github.com/flgisimone/Main-TV-Series-Primeflix-Amazon-Prime-Clone",
       "site": "https://flgisimone.github.io/Main-TV-Series-Primeflix-Amazon-Prime-Clone/",
       // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop />, <AiOutlineMobile />]
+      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1}  />]
   },
   {
       "id": 3,
@@ -30,7 +30,7 @@ const portfolio = [
       "repository": "https://github.com/flgisimone/Weather-App",
       "site": "https://flgisimone.github.io/Weather-App/",
       // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop />, <AiOutlineMobile />, <AiOutlineTablet />]
+      "device": [<AiOutlineDesktop key={0} />, <AiOutlineMobile key={1} />, <AiOutlineTablet key={2} />]
   }
 ]
 
