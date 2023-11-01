@@ -18,16 +18,16 @@ const PortfolioSection = () => {
   const project = portfolio.map(item => 
     <SwiperSlide key={item.id}>
       <div className={styles['project-wrapper']}>
-        <Typography variant='span' className={styles['project-name']}>{item.name}</Typography>
+        <Typography variant='h6' className={styles['project-name']}>{item.name}</Typography>
         <Image src={item.media} width={300} height={300} alt={item.name}/>
         <div className={styles['project-wrapper-info']}>
-          <Typography variant='p' className={styles['project-device']}>{item.device.map(el => <span key={el.id}>{el.icon}</span>)}</Typography>
+          <Typography variant='inherit' className={styles['project-device']}>{item.device.map(el => <span key={el.id}>{el.icon}</span>)}</Typography>
           <div className={styles['project-wrapper-info__link']}>
             <Link href={item.repository}><AiOutlineGithub /></Link>
             <Link href={item.site}><AiOutlineLink /></Link>
           </div>
         </div>
-        <Typography variant='p' className={styles['project-overview']}>{item.overview}</Typography>
+        <Typography variant='inherit' className={styles['project-overview']}>{item.overview}</Typography>
       </div>
     </SwiperSlide>
     )
