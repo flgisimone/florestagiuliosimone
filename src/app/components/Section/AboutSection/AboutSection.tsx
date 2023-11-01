@@ -15,7 +15,7 @@ import styles from './AboutSection.module.scss'
 const AboutSection = () => {
 
   // eslint-disable-next-line
-  const stackImg = stack.map((item, index) => (<li key={index}> <Image src={item?.url} alt={item?.name} width={88} height={28} /></li>))
+  const stackImg = stack.map((item, index) => <Image src={item?.url} alt={item?.name} width={88} height={28} />)
 
   return (
     <section className={styles['about-section']}>
@@ -29,13 +29,13 @@ const AboutSection = () => {
             </ul>
         </div>
         <div className={styles['about-section-blockquote']}>
-            <Typography>&#34;Il mio approccio al lavoro è incentrato sull&#8221;idea di creare <span>siti web</span> che siano <span>funzionali e facilmente navigabili</span>, dando particolare attenzione alle tematiche di UX/UI.</Typography>
-            <Typography>Mi piace condividere idee e conoscenze con altri sviluppatori, designer e project manager, <span>al fine di realizzare progetti di successo</span> che rispondano alle esigenze dei clienti e degli utenti finali.&#34;</Typography>
+            <Typography>Il mio approccio al lavoro è incentrato sul voler creare <span>siti web</span> che siano <span>funzionali e facilmente navigabili</span>, dando particolare attenzione alle tematiche di UX/UI.</Typography>
+            <Typography>Mi piace condividere idee e conoscenze con altri sviluppatori, designer e project manager, <span>al fine di realizzare progetti di successo</span> che rispondano alle esigenze dei clienti e degli utenti finali.</Typography>
         </div>
         <div className={styles['about-section-stack']}>
           <Typography variant='h3'>Stack tecnologico</Typography>
           <div className={styles['about-section-stack-coding']}>
-            <ul>{stackImg}</ul>
+            <ul>{stack.map((item, index) => <Image key={index} src={item?.url || undefined} alt={item?.name || undefined} width={88} height={28} />)}</ul>
           </div>
           <TextSphere />
         </div>
