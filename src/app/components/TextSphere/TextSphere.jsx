@@ -33,7 +33,7 @@ const TextSphere = () => {
             keep: true,
           };
     
-          TagCloud(container, texts, options);
+          TagCloud(container , texts, options);
         };
       }, []);
 
