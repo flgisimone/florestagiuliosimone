@@ -1,0 +1,7 @@
+@import '../../mixins/_breakpoint';
+
+.ShowOnDesktop {
+    @include media('<=large') {
+        display: none;
+    }
+}

@@ -1,0 +1,5 @@
+$pixel-to-rem-ratio: 16; 
+
+@function to-rem($px) {
+  @return #{$px / $pixel-to-rem-ratio}rem;
+}

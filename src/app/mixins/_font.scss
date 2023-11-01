@@ -1,0 +1,71 @@
+@mixin t-regular-12($font-size: 12px, $font-weight: 400) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-semibold-12($font-size: 12px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-regular-14($font-size: 14px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-semibold-14($font-size: 14px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-regular-16($font-size: 16px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-semibold-16($font-size: 16px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-regular-18($font-size: 18px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-semibold-18($font-size: 18px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-regular-20($font-size: 20px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-semibold-20($font-size: 20px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-logo($font-size: 32px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+@mixin t-h2($font-size: 20px, $font-weight: 600) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}

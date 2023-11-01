@@ -1,0 +1,64 @@
+@import '../../../mixins/font';
+@import '../../../mixins/pixel-convert';
+@import '../../../mixins/layout';
+
+.portfolio-section {
+    h2 {
+        @include t-h2;
+
+        span {
+            color: var(--secondary-color);
+        }
+    }
+
+    > div {
+        padding-bottom: to-rem(40);
+
+        > div {
+            .project-wrapper {
+                @include flex-column;
+                margin-block-start: to-rem(16);
+                gap: to-rem(16);
+
+                .project-name {
+                    @include t-semibold-18;
+                }
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+                &-info {
+                    @include flex-between;
+
+                    .project-device {
+                        @include t-regular-20;
+                        display: flex;
+                        gap: to-rem(8);
+                    }
+
+                    &__link {
+                        display: flex;
+                        gap: to-rem(16);
+
+                        a {
+                            @include t-regular-20;
+                        }
+                    }
+                }
+
+                .project-overview {
+                    @include t-regular-16;
+                }
+            }
+        }
+    }
+
+    [class*=button-prev],
+    [class*=button-next] {
+        top: auto;
+        bottom: 0;
+    }
+}

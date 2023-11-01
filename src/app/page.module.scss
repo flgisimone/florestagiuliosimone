@@ -1,0 +1,8 @@
+@import './mixins/layout';
+@import './mixins/pixel-convert';
+
+.main {
+    @include flex-column;
+    padding: var(--padding);
+    gap: to-rem(32);
+}
