@@ -9,8 +9,16 @@ const portfolio = [
       "media": "https://iili.io/H1gYf72.gif",
       "repository": "https://github.com/flgisimone/memories-social-app",
       "site": "https://github.com/flgisimone/memories-social-app",
-      // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1} />]
+      "device": [
+        {
+            id: 1,
+            icon: <AiOutlineDesktop />
+        }, 
+        {
+            id: 2,
+            icon: <AiOutlineMobile />
+        }
+    ]
   },
   {
       "id": 2,
@@ -19,8 +27,16 @@ const portfolio = [
       "media": "https://i.postimg.cc/65gLDPPP/prime-Flix23.gif",
       "repository": "https://github.com/flgisimone/Main-TV-Series-Primeflix-Amazon-Prime-Clone",
       "site": "https://flgisimone.github.io/Main-TV-Series-Primeflix-Amazon-Prime-Clone/",
-      // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1} />]
+      "device": [
+        {
+            id: 1,
+            icon: <AiOutlineDesktop />
+        }, 
+        {
+            id: 2,
+            icon: <AiOutlineMobile />
+        }
+    ]
   },
   {
       "id": 3,
@@ -29,8 +45,20 @@ const portfolio = [
       "media": "https://i.postimg.cc/yNGWpqxQ/weather-App2.gif",
       "repository": "https://github.com/flgisimone/Weather-App",
       "site": "https://flgisimone.github.io/Weather-App/",
-      // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop key={0} />, <AiOutlineMobile key={1} />, <AiOutlineTablet key={2} />]
+      "device": [
+        {
+            id: 1,
+            icon: <AiOutlineDesktop />
+        }, 
+        {
+            id: 2,
+            icon: <AiOutlineMobile />
+        },
+        {
+            id: 3,
+            icon: <AiOutlineTablet />
+        }
+    ]
   }
 ]
 
