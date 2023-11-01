@@ -28,8 +28,8 @@ const AboutSection = () => {
             </ul>
         </div>
         <div className={styles['about-section-blockquote']}>
-            <Typography>"Il mio approccio al lavoro è incentrato sull'idea di creare <span>siti web</span> che siano <span>funzionali e facilmente navigabili</span>, dando particolare attenzione alle tematiche di UX/UI.</Typography>
-            <Typography>Mi piace condividere idee e conoscenze con altri sviluppatori, designer e project manager, <span>al fine di realizzare progetti di successo</span> che rispondano alle esigenze dei clienti e degli utenti finali."</Typography>
+            <Typography>&quotIl mio approccio al lavoro è incentrato sull&aposidea di creare <span>siti web</span> che siano <span>funzionali e facilmente navigabili</span>, dando particolare attenzione alle tematiche di UX/UI.</Typography>
+            <Typography>Mi piace condividere idee e conoscenze con altri sviluppatori, designer e project manager, <span>al fine di realizzare progetti di successo</span> che rispondano alle esigenze dei clienti e degli utenti finali.&quot</Typography>
         </div>
         <div className={styles['about-section-stack']}>
           <Typography variant='h3'>Stack tecnologico</Typography>
