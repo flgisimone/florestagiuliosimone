@@ -8,6 +8,9 @@ const nextConfig = {
         },
       ],
     },
+    rules: {
+      "react/jsx-key": "error",
+    },
 };
 
 module.exports = nextConfig
