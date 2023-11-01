@@ -7,10 +7,7 @@ const nextConfig = {
           hostname: "**",
         },
       ],
-    },
-    rules: {
-      "react/jsx-key": "error",
-    },
+    }
 };
 
 module.exports = nextConfig
