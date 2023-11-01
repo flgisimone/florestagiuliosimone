@@ -20,7 +20,7 @@ const portfolio = [
       "repository": "https://github.com/flgisimone/Main-TV-Series-Primeflix-Amazon-Prime-Clone",
       "site": "https://flgisimone.github.io/Main-TV-Series-Primeflix-Amazon-Prime-Clone/",
       // eslint-disable-next-line no-unused-vars
-      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1}  />]
+      "device": [<AiOutlineDesktop key={0}/>, <AiOutlineMobile key={1} />]
   },
   {
       "id": 3,
