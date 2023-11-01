@@ -83,9 +83,14 @@
         }
 
         &-coding ul {
-            display: flex;
+            @include flex-between;
             flex-wrap: wrap;
-            gap: to-rem(4);
+            gap: to-rem(16);
+            
+            li img {
+                min-width: to-rem(88);
+                min-height: to-rem(28);
+            }
         }
     }
 

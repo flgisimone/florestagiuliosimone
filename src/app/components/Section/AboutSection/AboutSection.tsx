@@ -1,19 +1,20 @@
 import React from 'react'
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { Typography } from '@mui/material';
 
+import TextSphere from '../../TextSphere';
 import stack from '../../../utils/stack'
 
 import styles from './AboutSection.module.scss'
-import TextSphere from '../../TextSphere';
 
 const AboutSection = () => {
 
-  const stackImg = stack.map((item, index) => (<li key={index}> <img src={item.url} alt={item.name} /></li>))
+  const stackImg = stack.map((item, index) => (<li key={index}> <Image src={item?.url} alt={item?.name} width={88} height={28} /></li>))
 
   return (
     <section className={styles['about-section']}>
