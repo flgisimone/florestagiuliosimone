@@ -12,7 +12,7 @@ const TextSphere = () => {
 
     useEffect(() => {
         return () => {
-          const container = ".tagcloud";
+          const container = document.querySelector('.tagcloud');
     
           const options = {
             radius: 200,
