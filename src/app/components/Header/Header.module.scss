@@ -4,16 +4,17 @@
 @import '../../mixins/_breakpoint';
 
 .header-wrapper {
-    box-shadow: 0 0px 10px 0px var(--secondary-color);
-    padding: var(--padding);
+  @include flex-between;
+
+  box-shadow: 0 0px 10px 0px var(--secondary-color);
+  padding: var(--padding);
     
-    @include flex-between;
 
     .header-drawer {
       button {
+        min-width: unset;
         margin: 0;
         padding: 0;
-        justify-content: flex-end;
         color: var(--primary-color);
 
         @include t-icon;
