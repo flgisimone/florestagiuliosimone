@@ -12,9 +12,9 @@ const TextSphere = () => {
 
     useEffect(() => {
         return () => {
-          const container = document.querySelector('.tagcloud');
+          const container: string = ".tagcloud";
     
-          const options = {
+          const options: {} = {
             radius: 200,
             maxSpeed: "fast",
             initSpeed: "normal",
@@ -22,7 +22,7 @@ const TextSphere = () => {
           };
     
           // eslint-disable-next-line no-use-before-define
-          TagCloud(container, textSphere, options); 
+          TagCloud(container , textSphere, options); 
         };
       }, []);
 
