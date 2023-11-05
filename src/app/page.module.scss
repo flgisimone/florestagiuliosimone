@@ -3,6 +3,7 @@
 
 .main {
     @include flex-column;
+    
     padding: var(--padding);
-    gap: to-rem(32);
+    gap: to-rem(60);
 }

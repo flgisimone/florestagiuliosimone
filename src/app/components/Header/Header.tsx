@@ -5,14 +5,14 @@ import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai';
 
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
 
 import ShowOnDesktop from '../ShowOnDesktop'
 import ShowOnMobile from '../ShowOnMobile'
-
-import { Typography } from '@mui/material';
+import Menu from '../Menu';
+import Credit from '../Footer/Credit';
 
 import styles from './Header.module.scss'
-import Menu from '../Menu';
 
 type Anchor = 'right';
 
@@ -41,6 +41,7 @@ const Header = () => {
                         >
                             <Button onClick={toggleDrawer(anchor, false)}><AiOutlineMenuUnfold /></Button>
                             <Menu />
+                            <Credit />
                         </Drawer>
                     </div> 
                 )}

@@ -1,0 +1,26 @@
+.credit-wrapper {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: height 0.3s;
+    background: #f0f0f0;
+    color: white;
+
+    .credit-wrapper-handle {
+        cursor: pointer;
+        background: #f0f0f0;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      .content {
+        padding: 10px;
+      }
+
+      .open {
+        height: 300px; /* Altezza aperto */
+      }
+      
+  }
+  
