@@ -10,13 +10,15 @@ import { BiCode, BiCodeAlt } from 'react-icons/bi';
 
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
+import { Typography } from '@mui/material';
+
+import IContactSection from './IContactSection';
 
 import styles from './ContactSection.module.scss';
-import { Typography } from '@mui/material';
 
 const ContactSection = () => {
 
-  const form = useRef([]);
+  const form = useRef<any>([]);
   const [open, setOpen] = useState(false);
 
   const onSubmit = () => {
@@ -30,27 +32,27 @@ const ContactSection = () => {
     }, 3000);
   }
 
-  const validate =  (values: any) => {
-    const errors= {};
+  const validate = (values: IContactSection['values']) => {
+    const errors: Partial<IContactSection['errors']> = {};
 
-    if (!values.firstName) errors.firstName = 'Campo obbligatorio';
-    if (!values.lastName) errors.lastName = 'Campo obbligatorio';
+    if (!values?.firstName) errors.firstName = 'Campo obbligatorio';
+    if (!values?.lastName) errors.lastName = 'Campo obbligatorio';
 
-    if (!values.email) {
+    if (!values?.email) {
       errors.email = 'Campo obbligatorio';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
       errors.email = 'Email non valida';
     }
 
-    if (!values.object) {
+    if (!values?.object) {
       errors.object = 'Campo obbligatorio';
     } else if (values.object.length < 5) {
       errors.object = `Oggetto dell'email troppo corto`;
     }
 
-    if (!values.message) {
+    if (!values?.message) {
       errors.message = 'Campo obbligatorio';
-    } else if (values.message.length < 10) {
+    } else if (values.message.length < 5) {
       errors.message = 'Messaggio troppo corto';
     }
   
