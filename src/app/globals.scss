@@ -23,3 +23,14 @@
         @include t-icon;
     }
 }
+
+.MuiModal-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--modal-backdrop);
+
+    p {
+        @include t-semibold-20;
+    }
+}

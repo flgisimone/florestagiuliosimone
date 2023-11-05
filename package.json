@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.16",
     "@mui/styled-engine-sc": "^6.0.0-alpha.4",
+    "final-form": "^4.20.10",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-final-form": "^6.5.9",
     "react-icons": "^4.11.0",
     "sass": "^1.69.5",
     "styled-components": "^6.1.0",

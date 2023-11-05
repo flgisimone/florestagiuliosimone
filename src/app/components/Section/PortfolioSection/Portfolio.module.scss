@@ -20,6 +20,7 @@
             @include t-icon;
         }
     }
+    
     > div {
         padding-bottom: to-rem(40);
 
@@ -30,7 +31,7 @@
                 gap: to-rem(8);
 
                 .project-name {
-                    @include t-semibold-18;
+                    @include t-semibold-16;
                 }
                 
                 img {
@@ -59,7 +60,7 @@
                 }
 
                 .project-overview {
-                    @include t-regular-16;
+                    @include t-regular-14;
                 }
             }
         }

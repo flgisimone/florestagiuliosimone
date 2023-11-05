@@ -1,9 +1,13 @@
 :root {
     --background-color: #1C1C1C;
     --drawer-overlay: #000000;
+    --modal-backdrop: #000000b9;
 
     --primary-color: #f5f5f5;
     --secondary-color: #ffa500;
+    --color-black: #1C1C1C;
+    --color-grey: #666666;
+    --error-color: #ff3939;
 
     --padding: 20px;
     --swiper-navigation-size: 20px !important;
