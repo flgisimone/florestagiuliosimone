@@ -1,61 +1,50 @@
 'use client'
 
 import React, {useState} from 'react'
-import { AiOutlineMenuFold} from 'react-icons/ai';
+import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai';
 
+import Drawer from '@mui/material/Drawer';
 import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 
 import ShowOnDesktop from '../ShowOnDesktop'
 import ShowOnMobile from '../ShowOnMobile'
 
 import { Typography } from '@mui/material';
 
-import Button from '../Button';
-
 import styles from './Header.module.scss'
-import FlyoutMenu from '../FlyoutMenu';
+import Menu from '../Menu';
 
+type Anchor = 'right';
 
 const Header = () => {
 
-    const slideInLeft = `${styles["flyout-menu-overlay"]} ${styles["slideInLeft"]}`;
-    const [isActiveFlyoutMenu, setIsActiveFlyoutMenu] = useState(false);
+    const [activeDrawer, setActiveDrawer] = useState({right: false});
 
-    const onHandleFlyoutMenu = () => setIsActiveFlyoutMenu(!isActiveFlyoutMenu);
+    const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.MouseEvent) => { 
+        setActiveDrawer({ ...activeDrawer, [anchor]: open });
+    }
 
     return (
         <header className={styles['header-wrapper']}>
             <Typography variant='h4' className={styles['logo']}>FGS</Typography>
             <ShowOnDesktop>
-            <nav role='menu' className={styles['menu']}>
-                <ul>
-                    <Link href="/"><span>01. </span>Chi sono</Link>
-                    <Link href="/"><span>02. </span>theLab.</Link>
-                    <Link href="/"><span>03. </span>Contatti</Link>
-                </ul>
-            </nav>
+                <Menu />
             </ShowOnDesktop>
             <ShowOnMobile>
-                <>
-                <Button onClick={onHandleFlyoutMenu}>
-                    <AiOutlineMenuFold />
-                </Button>
-                {isActiveFlyoutMenu &&
-                <FlyoutMenu
-                    isActiveFlyoutMenu={isActiveFlyoutMenu}
-                    setIsActiveFlyoutMenu={setIsActiveFlyoutMenu} 
-                    slideInLeft={slideInLeft}
-                >
-                    <nav role='menu' className={styles['menu']}>
-                        <ul>
-                            <Link href="/"><span>01. </span>Chi sono</Link>
-                            <Link href="/"><span>02. </span>theLab.</Link>
-                            <Link href="/"><span>03. </span>Contatti</Link>
-                        </ul>
-                    </nav>
-                </FlyoutMenu>
-                }
-                </>
+                {(['right'] as const).map((anchor) =>
+                    <div className={styles['header-drawer']} key={anchor}>
+                        <Button onClick={toggleDrawer(anchor, true)}><AiOutlineMenuFold /></Button>
+                        <Drawer
+                            anchor={anchor}
+                            open={activeDrawer[anchor]}
+                            onClose={toggleDrawer(anchor, false)}
+                        >
+                            <Button onClick={toggleDrawer(anchor, false)}><AiOutlineMenuUnfold /></Button>
+                            <Menu />
+                        </Drawer>
+                    </div> 
+                )}
             </ShowOnMobile>
         </header>
   )

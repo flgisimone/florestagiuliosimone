@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { IoMdArrowDropright } from 'react-icons/io';
+import { BiCode, BiCodeAlt } from 'react-icons/bi';
+
 import { Typography } from '@mui/material';
 
 import TextSphere from '../../TextSphere';
@@ -19,7 +21,7 @@ const AboutSection = () => {
   return (
     <section className={styles['about-section']}>
         <div className={styles['about-section-header']}>
-            <Typography variant='h2'><span>#</span>Chi sono</Typography>
+            <Typography variant='h2'><BiCode />Chi sono<BiCodeAlt /></Typography>
             <Typography>Sono Simone, Front-End Developer.</Typography>
             <ul>
               <Typography>Visita i miei profili Social <IoMdArrowDropright /></Typography>

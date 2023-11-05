@@ -6,7 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import {Typography} from '@mui/material'
+
 import { AiOutlineLink, AiOutlineGithub } from 'react-icons/ai';
+import { BiCode, BiCodeAlt } from 'react-icons/bi';
 
 import Slider from '../../Slider';
 import portfolio from '../../../utils/portfolio';
@@ -34,7 +36,7 @@ const PortfolioSection = () => {
 
   return (
     <section className={styles['portfolio-section']}>
-      <Typography variant='h2'><span>#</span>theLab.</Typography>
+      <Typography variant='h2'><BiCode />theLab.<BiCodeAlt /></Typography>
       <Slider>
         {project}
       </Slider>

@@ -4,27 +4,15 @@ import React, {useEffect} from 'react'
 
 import TagCloud from "TagCloud";
 
-import './TextSphere.css';
+import textSphere from '../../utils/textSphere';
+
+import './TextSphere.scss';
 
 const TextSphere = () => {
 
     useEffect(() => {
         return () => {
           const container = ".tagcloud";
-          const texts = [
-            "HTML5",
-            "JavaScript",
-            "CSS3",
-            "TypeScript",
-            "React",
-            "Next",
-            "SASS",
-            "Material-UI",
-            "npm",
-            "Git",
-            "Jira",
-            "Bitbucket",
-          ];
     
           const options = {
             radius: 200,
@@ -33,7 +21,8 @@ const TextSphere = () => {
             keep: true,
           };
     
-          TagCloud(container , texts, options);
+          // eslint-disable-next-line no-use-before-define
+          TagCloud(container, textSphere, options); 
         };
       }, []);
 

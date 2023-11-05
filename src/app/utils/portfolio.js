@@ -1,4 +1,3 @@
-
 import { AiOutlineDesktop, AiOutlineMobile, AiOutlineTablet } from 'react-icons/ai';
 
 const portfolio = [

@@ -9,59 +9,14 @@
     
     @include flex-between;
 
-    button {
-      justify-content: flex-end;
-      font-size: to-rem(24);
-    }
-
-    .flyout-menu-overlay {
-      position: fixed;
-      inset-block-start: 0;
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      height: 100%;
-      padding: var(--padding);
-      background-color: var(--flyout-overlay);
-      z-index: 9999;
-      box-shadow: 10px 10px 61px -11px rgba(0,0,0,0.1);
-      gap: to-rem(24);
-
+    .header-drawer {
       button {
-        padding-block-start: to-rem(9);
-      }
+        margin: 0;
+        padding: 0;
+        justify-content: flex-end;
+        color: var(--primary-color);
 
-      nav > ul {
-        display: flex;
-        flex-direction: column;
-        gap: to-rem(16);
-
-        a {
-          @include t-regular-16;
-
-          span {
-            color: var(--secondary-color);
-          }
-        }
-      }
-    }
-  
-    .slideInLeft {
-      animation: slideInLeft 0.3s both;
-      right: 0;
-    }
-
-    .flyout-menu-close-btn {
-      font-size: 2rem;
-    }
-
-    
-    @keyframes slideInLeft {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(0%);
+        @include t-icon;
       }
     }
 }

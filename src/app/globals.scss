@@ -1,0 +1,19 @@
+@import './mixins/pixel-convert';
+@import './mixins/font';
+@import './mixins/layout';
+@import './mixins/_breakpoint';
+
+.MuiDrawer-modal > .MuiPaper-elevation {
+    width: 50%;
+    padding: var(--padding);
+    background-color: var(--drawer-overlay);
+
+    button {
+        margin-block-start: to-rem(4);
+        padding-inline-end: 0;
+        justify-content: flex-end;
+        color: var(--primary-color);
+
+        @include t-icon;
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../mixins/pixel-convert'; 
+@import '../../mixins/font'; 
+
+.menu-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block-start: to-rem(20);
+
+    li {
+        padding: 0;
+        min-height: unset;
+
+        a {
+            @include t-regular-16;
+            
+            color: var(--primary-color);
+            text-decoration: none;
+    
+            span {
+                margin-inline-end: to-rem(4);
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
