@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
 import TagCloud from "TagCloud";
 
@@ -10,9 +10,11 @@ import './TextSphere.scss';
 
 const TextSphere = () => {
 
+  let container;
+
     useEffect(() => {
         return () => {
-          const container: string = ".tagcloud";
+          container = '.tagcloud';
     
           const options: {} = {
             radius: 200,
@@ -21,7 +23,6 @@ const TextSphere = () => {
             keep: true,
           };
     
-          // eslint-disable-next-line no-use-before-define
           TagCloud(container , textSphere, options); 
         };
       }, []);
