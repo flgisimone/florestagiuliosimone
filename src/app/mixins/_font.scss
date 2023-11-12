@@ -1,3 +1,9 @@
+@mixin t-regular-10($font-size: 10px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
 @mixin t-regular-12($font-size: 12px, $font-weight: 400) {
     font-size: $font-size;
     font-weight: $font-weight;
