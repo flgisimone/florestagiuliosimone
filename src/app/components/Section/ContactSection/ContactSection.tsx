@@ -70,7 +70,6 @@ const ContactSection = () => {
             <Field name="firstName"
               render={({input, meta}) => (
                 <div className={styles['first-name']}>
-                  <label htmlFor='firstName'>Nome*</label>
                   <input 
                     type="text" 
                     {...input} 
@@ -85,7 +84,6 @@ const ContactSection = () => {
             <Field name="lastName"
               render={({input, meta}) => (
                 <div className={styles['last-name']}>
-                  <label htmlFor='lastName'>Cognome*</label>
                   <input type="text" {...input} autoComplete="off" id="lastName" placeholder='Inserisci il Cognome' />
                   {meta.touched && meta.error && <span>{meta.error}</span>}
                 </div>
@@ -95,7 +93,6 @@ const ContactSection = () => {
               name="email" 
               render={({input, meta}) => (
                 <div className={styles['email']}>
-                  <label htmlFor='email'>Email*</label>
                   <input type="email" {...input} id="email" placeholder='Inserisci Email' />
                   {meta.touched && meta.error && <span>{meta.error}</span>}
                 </div>
@@ -105,7 +102,6 @@ const ContactSection = () => {
               name="object" 
               render={({input, meta}) => (
                 <div className={styles['object']}>
-                  <label htmlFor='oggetto'>Oggetto*</label>
                   <input type="text" {...input} autoComplete="off" id="oggetto" placeholder='Inserisci Oggetto Email' />
                   {meta.touched && meta.error && <span>{meta.error}</span>}
               </div>
@@ -115,7 +111,6 @@ const ContactSection = () => {
               name="message" 
               render={({input, meta}) => (
                 <div className={styles['message']}>
-                  <label htmlFor='message'>Messaggio*</label>
                   <textarea {...input} autoComplete="off" id="message" placeholder='Inserisci messaggio' />
                   {meta.touched && meta.error && <span>{meta.error}</span>}
                 </div>

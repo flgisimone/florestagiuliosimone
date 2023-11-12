@@ -3,14 +3,14 @@
 @import '../../mixins/layout';
 @import '../../mixins/_breakpoint';
 
-.header-wrapper {
+.header {
   @include flex-between;
 
-  box-shadow: 0 0px 10px 0px var(--secondary-color);
   padding: var(--padding);
-    
+  background-color: var(--background-color-2);
+  box-shadow: 0 0px 10px 0px var(--secondary-color);
 
-    .header-drawer {
+    &-drawer {
       button {
         min-width: unset;
         margin: 0;

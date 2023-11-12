@@ -1,0 +1,27 @@
+@import '../../mixins/font';
+@import '../../mixins/pixel-convert';
+@import '../../mixins/layout';
+
+.footer {
+    @include flex-center;
+    @include flex-column;
+
+    margin-block-start: to-rem(32);
+    padding: var(--padding);
+    gap: to-rem(8);
+    background-color: var(--background-color-2);
+
+    p {
+        @include t-regular-12;
+    }
+
+    &-stack {
+        @include flex-center;
+
+        gap: to-rem(6);
+
+        svg {
+            @include t-regular-18;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.textSphere {
+   > div > div {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%);
+
+    span {
+        color: var(--secondary-color);
+        text-transform: uppercase;
+    }
+   }
+}
+

@@ -1,37 +1,29 @@
 'use client'
 
-import React, {useEffect, useRef} from 'react'
-
-import TagCloud from "TagCloud";
+import React from 'react'
+import { TagCloud } from "@frank-mayer/react-tag-cloud";
 
 import textSphere from '../../utils/textSphere';
 
-import './TextSphere.scss';
+import styles from './TextSphere.module.scss';
 
 const TextSphere = () => {
-
-  let container;
-
-    useEffect(() => {
-        return () => {
-          container = '.tagcloud';
-    
-          const options: {} = {
-            radius: 200,
+  
+  return(
+    <div className={styles['textSphere']}>
+        <TagCloud
+          options={(w: Window & typeof globalThis): TagCloudOptions => ({
+            radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
             maxSpeed: "fast",
-            initSpeed: "normal",
-            keep: true,
-          };
-    
-          TagCloud(container , textSphere, options); 
-        };
-      }, []);
+          })}
+          onClick={(tag: string, e: MouseEvent) => alert(tag)}
+          onClickOptions={{ passive: true }}
+        >
+          {textSphere}
+       </TagCloud>
+    </div>
+  )
 
-    return (
-        <div className="text-shpere">
-            <span className="tagcloud"></span>
-        </div>
-    )
 }
 
 export default TextSphere;

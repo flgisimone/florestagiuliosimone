@@ -66,6 +66,12 @@
         }
     }
 
+    [class*=swiper-pagination] {
+        span {
+            background-color: var(--swiper-theme-color);
+        }
+    }
+    
     [class*=button-prev],
     [class*=button-next] {
         top: auto;

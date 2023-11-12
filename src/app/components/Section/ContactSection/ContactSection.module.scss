@@ -38,6 +38,10 @@
             input {
                 padding: to-rem(8);
                 outline: none;
+                border: none;
+                border-block-end: 1px solid var(--secondary-color);
+                background-color: transparent;
+                color: var(--primary-color);
 
                 @include t-regular-14;
             }
@@ -46,6 +50,8 @@
                 height: to-rem(120);
                 padding: to-rem(8);
                 outline: none;
+
+                @include t-regular-14;
             }
 
             span {
@@ -55,26 +61,28 @@
             }
         }
 
-        .button-abled {
-            display: flex;
-            justify-content: center;
-            padding: to-rem(8);
-            background-color: var(--secondary-color);
-            border: none;
-            color: var(--color-black);
-
-            @include t-semibold-14;
-        }
-
-        .button-disabled {
+        .button {
             display: flex;
             justify-content: center;
             padding: to-rem(8);
             border: none;
-            color: var(--color-black);
-            background-color: var(--color-grey);
+            
 
-            @include t-semibold-14;
+            &-abled {
+                height: to-rem(32);
+                background-color: var(--secondary-color);
+                color: var(--color-black);
+
+                @include t-semibold-12;   
+            }
+
+            &-disabled {
+                height: to-rem(32);
+                background-color: var(--color-grey);
+                color: var(--color-black);
+
+                @include t-semibold-12;
+            }
         }
     }
 }

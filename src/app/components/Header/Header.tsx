@@ -10,7 +10,6 @@ import { Typography } from '@mui/material';
 import ShowOnDesktop from '../ShowOnDesktop'
 import ShowOnMobile from '../ShowOnMobile'
 import Menu from '../Menu';
-import Credit from '../Footer/Credit';
 
 import styles from './Header.module.scss'
 
@@ -25,7 +24,7 @@ const Header = () => {
     }
 
     return (
-        <header className={styles['header-wrapper']}>
+        <header className={styles['header']}>
             <Typography variant='h4' className={styles['logo']}>FGS</Typography>
             <ShowOnDesktop>
                 <Menu />
@@ -41,7 +40,6 @@ const Header = () => {
                         >
                             <Button onClick={toggleDrawer(anchor, false)}><AiOutlineMenuUnfold /></Button>
                             <Menu />
-                            <Credit />
                         </Drawer>
                     </div> 
                 )}

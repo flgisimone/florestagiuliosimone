@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 import {Typography} from '@mui/material'
 
-import { AiOutlineLink, AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineLink, AiOutlineGithub, AiOutlineArrowRight } from 'react-icons/ai';
 import { BiCode, BiCodeAlt } from 'react-icons/bi';
 
 import Slider from '../../Slider';
@@ -27,6 +27,7 @@ const PortfolioSection = () => {
           <div className={styles['project-wrapper-info__link']}>
             <Link href={item.repository}><AiOutlineGithub /></Link>
             <Link href={item.site}><AiOutlineLink /></Link>
+            <Link href={item.site}><AiOutlineArrowRight /></Link>
           </div>
         </div>
         <Typography variant='inherit' className={styles['project-overview']}>{item.overview}</Typography>
