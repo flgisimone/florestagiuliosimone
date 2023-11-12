@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
+import { TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 
 import textSphere from '../../utils/textSphere';
 
