@@ -29,11 +29,11 @@ const AboutSection = () => {
             <Typography>Mi piace condividere idee e conoscenze con altri sviluppatori, designer e project manager, <p>al fine di realizzare progetti di successo</p> che rispondano alle esigenze dei clienti e degli utenti finali.</Typography>
           </div>
         </div>
-        <ul>
+        <div className={styles['about-section-wrapper-contact']}>
           <Typography>Visita i miei profili Social <IoMdArrowDropright /></Typography>
           <Link href={'https://www.linkedin.com/in/giuliosimonefloresta/'}><BsLinkedin /></Link>
           <Link href={'https://github.com/flgisimone'}><BsGithub /></Link>
-        </ul>
+        </div>
         <div className={styles['about-section-wrapper-stack']}>
           <Typography variant='h3'>Stack tecnologico</Typography>
           <div className={styles['about-section-wrapper-stack-coding']}>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const useMedia = () => {
     
-    const [isMobile, setIsMobile] = useState(window?.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window?.innerWidth < 768);
 
     useEffect(() => {
         const handleResize = () => {
