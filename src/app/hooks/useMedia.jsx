@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const useMedia = (window: any) => {
+const useMedia = () => {
     
     const [isMobile, setIsMobile] = useState(window?.innerWidth < 768);
 
