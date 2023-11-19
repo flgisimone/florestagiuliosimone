@@ -1,42 +1,76 @@
 @import '../../../mixins/font';
 @import '../../../mixins/pixel-convert';
 @import '../../../mixins/layout';
+@import '../../../mixins/breakpoint';
 
 .about-section {
     @include flex-column;
 
-    gap: to-rem(32);
     margin-block-start: to-rem(16);
+    gap: to-rem(32);
 
-    &-header {
-        h2 {
-            @include t-h2;
+    @include media('>=large') {
+        @include flex-row;
+    }
 
-            display: flex;
-            align-items: center;
-            gap: to-rem(4);
-            margin-block-end: to-rem(16);
+    &-wrapper {
+        @include flex-column;
 
-            span {
-                color: var(--secondary-color);
+        gap: to-rem(32);
+
+        @include media('>=large') {
+            width: 65%;
+        }
+
+        &-header {
+            h2 {
+                @include t-semibold-20;
+    
+                display: flex;
+                align-items: center;
+                gap: to-rem(4);
+                margin-block-end: to-rem(16);
+    
+                span {
+                    color: var(--secondary-color);
+                }
+    
+                svg {
+                    fill: var(--secondary-color);
+                    @include t-icon;
+                }
             }
-
-            svg {
-                fill: var(--secondary-color);
-                @include t-icon;
+    
+            p {
+                @include t-semibold-16;
+        
+                span {
+                    color: var(--secondary-color);
+                }
             }
         }
 
-        p {
-            @include t-semibold-16;
+        &-blockquote {
+            @include flex-column;
+
+            margin-block-start: to-rem(12);
+            gap: to-rem(12);
     
-            span {
-                color: var(--secondary-color);
+            p {
+                @include t-regular-14;
+                
+                display: inline-block;
+                font-style: italic;
+    
+                p {
+                    @include t-semibold-14;
+
+                    color: var(--secondary-color);
+                }
             }
         }
 
         ul {
-            margin-block-start: to-rem(16);
             display: flex;
             align-items: center;
 
@@ -60,39 +94,25 @@
                 }
             }
         }
-    }
-
-    &-blockquote {
-        @include flex-column;
-        
-        gap: to-rem(12);
-
-        p {
-            @include t-regular-14;
-            font-style: italic;
-
-            span {
-                color: var(--secondary-color);
-            }
-        }
-    }
-
-    &-stack {
-        @include flex-column;
-
-        gap: to-rem(16);
-
-        h3 {
-            @include t-semibold-16;
-        }
-
-        &-coding ul {
-            display: flex;
-            flex-wrap: wrap;
+    
+        &-stack {
+            @include flex-column;
+    
             gap: to-rem(16);
 
-            img {
-                width: auto;
+    
+            h3 {
+                @include t-semibold-16;
+            }
+
+            &-coding ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: to-rem(16);
+    
+                img {
+                    width: auto;
+                }
             }
         }
     }

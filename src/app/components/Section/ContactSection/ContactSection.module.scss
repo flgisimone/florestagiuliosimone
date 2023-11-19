@@ -4,7 +4,7 @@
 
 .contact-section {
     h2 {
-        @include t-h2;
+        @include t-semibold-20;
 
         margin-block-end: to-rem(16);
         

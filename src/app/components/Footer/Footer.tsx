@@ -1,6 +1,4 @@
 import React from 'react'
-import Image
- from 'next/image';
 import { SiReact, SiTypescript, SiNextdotjs, SiSass, SiMui } from 'react-icons/si';
 
 import Typography from '@mui/material/Typography';
@@ -24,9 +22,6 @@ const Footer = () => {
         <SiSass />
         <SiMui />
       </div>
-      <Typography variant='body1' className={styles['deployment']}>
-        Deployment on Vercel - CMS by Sanity
-      </Typography>
     </footer>
   )
 }

@@ -24,10 +24,4 @@
             @include t-regular-18;
         }
     }
-
-    .deployment {
-        @include t-regular-10;
-
-        margin-block-start: to-rem(8);
-    }
 }

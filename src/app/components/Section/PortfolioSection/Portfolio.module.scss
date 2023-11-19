@@ -4,7 +4,7 @@
 
 .portfolio-section {
     h2 {
-        @include t-h2;
+        @include t-semibold-20;
 
         display: flex;
         align-items: center;
@@ -20,61 +20,72 @@
             @include t-icon;
         }
     }
-    
-    > div {
-        padding-bottom: to-rem(40);
 
-        > div {
-            .project-wrapper {
-                @include flex-column;
+    .skeleton-wrapper {
+        @include flex-column;
+        gap: to-rem(12);
+    }
+    
+    .project-wrapper {
+        @include flex-column;
+
+        gap: to-rem(12);
+
+        .project-name {
+            @include t-semibold-16;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        &-info {
+            @include flex-between;
+
+            .project-device {
+                @include t-regular-20;
+                @include flex-center;
                 
                 gap: to-rem(8);
 
-                .project-name {
-                    @include t-semibold-16;
+                span {
+                    display: flex;
                 }
-                
-                img {
-                    width: 100%;
-                    height: auto;
-                    object-fit: contain;
-                }
+            }
 
-                &-info {
-                    @include flex-between;
+            &__link {
+                @include flex-center;
 
-                    .project-device {
-                        @include t-regular-20;
-                        display: flex;
-                        gap: to-rem(8);
-                    }
+                gap: to-rem(8);
 
-                    &__link {
-                        display: flex;
-                        gap: to-rem(16);
-
-                        a {
-                            @include t-regular-20;
-                        }
-                    }
-                }
-
-                .project-overview {
-                    @include t-regular-14;
+                a {
+                    @include t-regular-20;
                 }
             }
         }
-    }
 
-    [class*=swiper-pagination] {
-        span {
-            background-color: var(--swiper-theme-color);
+        .project-overview {
+            @include t-regular-14;
         }
     }
-    
-    [class*=button-prev],
-    [class*=button-next] {
-        top: auto;
-        bottom: 0;
+
+    :global {
+        .swiper {
+            padding-bottom: to-rem(40);
+
+            &-button-prev,
+            &-button-next {
+                top: auto;
+                bottom: 0;
+            }
+
+            &-pagination {
+                span {
+                    background-color: var(--swiper-theme-color);
+                }
+            }
+        }
     }
 }
